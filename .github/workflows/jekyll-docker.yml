@@ -1,20 +1,159 @@
-name: Jekyll site CI
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainaf Akif - Aspiring Data Engineer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav {
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #eee;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    <header>
+        <div class="container">
+            <h1>Rainaf Akif</h1>
+            <p>Aspiring Data Engineer</p>
+        </div>
+    </header>
 
-jobs:
-  build:
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    runs-on: ubuntu-latest
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>I'm a dedicated Computer Science student with a keen interest in the dynamic field of data engineering. Enthusiastic about leveraging technology to harness the potential of data. On a journey to master building robust systems that transform raw information into valuable insights.</p>
+        <p>Throughout my academic journey at Taylor's University, I developed a strong foundation in Computer Science principles and honed my skills in programming, algorithms, and database management. I am committed to contributing to the evolving landscape of data engineering.</p>
+    </section>
 
-    steps:
-    - uses: actions/checkout@v4
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+    <section id="education" class="container">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <strong>Taylor's University</strong><br>
+                Bachelor of Computer Science<br>
+                August 2022 - August 2024<br>
+                CGPA - 3.7/4.0
+            </li>
+            <li>
+                <strong>Scholastica Uttara</strong><br>
+                High School<br>
+                July 2008 - March 2022
+            </li>
+        </ul>
+    </section>
+
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <ul>
+            <li>R Programming Language</li>
+            <li>C++ Programming Language</li>
+            <li>SQL / NoSQL</li>
+            <li>Python</li>
+            <li>Debugging</li>
+            <li>Theilsen and Time Variation graphs</li>
+            <li>Interpersonal Communication</li>
+            <li>Methodical Problem Solving</li>
+            <li>Time Management</li>
+        </ul>
+    </section>
+
+    <section id="experience" class="container">
+        <h2>Experience</h2>
+        <h3>Vice President, C.O.D.E Club (August 2023 - Present)</h3>
+        <ul>
+            <li>Coordinated a team of 8 committee members.</li>
+            <li>Facilitated 3 crash courses for new students for languages HTML/CSS, C++ and R.</li>
+            <li>Facilitated the C.O.D.E Coding Competition with 100 participants.</li>
+        </ul>
+        
+        <h3>Application of Open-Air Model (R-package) for Air Pollution in Delhi, India (February 2023 - May 2023)</h3>
+        <ul>
+            <li>Collaborated with a team of 5 members led by our lecturer on a research project.</li>
+            <li>Collected and Analyzed data of Air pollution using Open-Air Model to actionable insights.</li>
+            <li>Utilized Theilsen, Time Variation and Scatterplot functions with R language.</li>
+        </ul>
+
+        <h3>Peer Assisted Study Session Leader, American Degree Program (August 2023 - Present)</h3>
+        <ul>
+            <li>Recommended by our lecturer to guide junior peers in Fundamentals and Object-Oriented Programming in C++.</li>
+            <li>Conducted over 30 hours of group tutoring sessions.</li>
+            <li>Evaluated consistently by mentors to improve tutoring methods.</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p>Phone: +60-178332125</p>
+        <p>Email: rainafakif125@gmail.com</p>
+        <p>Address: Saujana Residence, SS16, Subang Jaya, Selangor 47500</p>
+    </section>
+
+    <footer>
+        <p>Rainaf Akif &copy; 2024</p>
+    </footer>
+
+</body>
+</html>
